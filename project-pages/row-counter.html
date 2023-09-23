@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Stitch Counter</title>
+	<link rel="stylesheet" href="../src/styles/row-counter.css" />
+	<link rel="stylesheet" href="../src/styles/home-btn.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<div id="counter-container">
+		<h1 class="title">Stitch Counter</h1>
+		<h2 class="current-count" id="count-el">0</h2>
+		<div id="btn-container" class="btn-entry-containers">
+			<div id="count-btn-container">
+				<button id="increment-btn" class="count-btns plus" onclick="increment()">
+					<p class="count-btns-text">+</p>
+				</button>
+				<button id="decrement-btn" class="count-btns minus" onclick="decrement()">
+					<p class="count-btns-text">-</p>
+				</button>
+			</div>
+			<div id="save-btn-container">
+				<button id="save-btn" onclick="save(), saveTotal()">
+					SAVE COUNT
+				</button>
+			</div>
+		</div>
+		<div id="entry-container" class="btn-entry-containers">
+			<div id="entry-log">
+				<p id="entry-highlight" class="highlight">Previous Entries:</p>
+				<div class="save-el-containter">
+					<p id="save-el" class="count-total"></p>
+				</div>
+			</div>
+			<div id="entry-log-total">
+				<p id="entry-highlight-total" class="highlight">Total Count:</p>
+				<div class="save-el-containter">
+					<p id="save-el-total" class="total">0</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="home-container">
+		<a id="home-btn" href="../index.html">Home</a></p>
+	</div>
+	<script src="../src/javascript/row-counter.js"></script>
+</body>
+
+</html>
