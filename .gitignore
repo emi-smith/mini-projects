@@ -1,0 +1,26 @@
+#  vscode
+.vscode
+
+# README
+*.md
+
+# CARD SLIDER PROJECT
+/project-pages/card-slider.html
+/src/javascript/card-slider.js 
+/src/styles/card-slider.css
+
+# CODE PROJECT
+/project-pages/code.html
+/src/javascript/code.js 
+/src/styles/code.css
+
+
+# DRUM KIT PROJECT
+/project-pages/drum-kit.html
+/src/javascript/drum-kit.js 
+/src/styles/drum-kit.css
+
+
+#TESTING JAVASCRIPT
+/src/javascript/TESTING.js
+/src/styles/TESTING.css
