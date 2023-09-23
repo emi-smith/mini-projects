@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mini Projects</title>
+	<link rel="icon" type="image/x-icon" href="./src/images/Favicon.png" />
+	<link rel="stylesheet" href="./src/styles/index.css" />
+	<link rel="stylesheet" href="./src/styles/global.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<h1 class="main-header">Mini Projects</h1>
+	</header>
+	<section id="projects">
+		<div id="project-gallery" class="gallery">
+			<div id="container-one" class="photo-container">
+				<figure class="photo">
+					<img id="img-one" class="filter-image small" src="./src/images/row-counter-image.png" alt="/" />
+					<figcaption>Stitch Counter</figcaption>
+					<a href="./project-pages/row-counter.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+			<div id="container-two" class="photo-container">
+				<figure class="photo">
+					<img id="img-two" class="filter-image" src="./src/images/score-board-image.png" alt="/" />
+					<figcaption>Score Board</figcaption>
+					<a href="./project-pages/score-board.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+			<div id="container-three" class="photo-container">
+				<figure class="photo">
+					<img id="img-three" class="filter-image small" src="./src/images/blackjack-md.png" alt="/" />
+					<figcaption>Blackjack</figcaption>
+					<a href="./project-pages/blackjack.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+			<div id="container-four" class="photo-container">
+				<figure class="photo">
+					<img id="img-four" class="filter-image" src="./src/images/stacked-imgs.png" alt="/" />
+					<figcaption>Stacked Photos</figcaption>
+					<a href="./project-pages/stacked-imgs.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+			<div id="container-five" class="photo-container">
+				<figure class="photo">
+					<img id="img-five" class="filter-image" src="./src/images/photo-zoom.png" alt="/" />
+					<figcaption>Photo Zoom</figcaption>
+					<a href="./project-pages/photo-zoom.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+			<div id="container-six" class="photo-container">
+				<figure class="photo">
+					<img id="img-five" class="filter-image" src="./src/images/password-generator.png" alt="/" />
+					<figcaption>Password Generator</figcaption>
+					<a href="./project-pages/Password-gen.html" type="button" class="project-details-btn">
+						Project Details
+					</a>
+				</figure>
+			</div>
+		</div>
+	</section>
+	<section id="buttons">
+		<button id="reset-stack" class="reset" type="button" onclick="resetStack()">
+			STACK RESET
+		</button>
+
+		<!-- <button id="suffle-stack" class="shuffle" type="button" onclick="randomize(arr)">
+			SHUFFLE
+		</button> -->
+	</section>
+	<section id="project-list">
+		<div class="list-wrapper">
+			<h2 class="project-list-header">Project List</h2>
+			<div class="project-links">
+				<a class="link-cards" href="./project-pages/score-board.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/score-board-image.png"
+						alt="/" />
+					<p>Score Board</p>
+				</a>
+				<a class="link-cards" href="./project-pages/blackjack.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/blackjack-md.png" alt="/" />
+					<p>Blackjack</p>
+				</a>
+				<a class="link-cards" href="./project-pages/row-counter.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/row-counter-image.png"
+						alt="/" />
+					<p>Stitch Counter</p>
+				</a>
+				<a class="link-cards" href="./project-pages/stacked-imgs.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/stacked-imgs.png" alt="/" />
+					<p>Stacked Photos</p>
+				</a>
+				<a class="link-cards" href="./project-pages/photo-zoom.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/photo-zoom.png" alt="/" />
+					<p>Photo Zoom</p>
+				</a>
+				<a class="link-cards" href="./project-pages/Password-gen.html">
+					<img className="img-one" height="30px" width="30px" src="./src/images/password-generator.png"
+						alt="/" />
+					<p>Password Generator</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<script src="./src/javascript/index.js"></script>
+</body>
+
+</html>
