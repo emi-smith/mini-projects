@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Score Board</title>
+	<link rel="stylesheet" href="../src/styles/score-board.css" />
+	<link rel="stylesheet" href="../src/styles/home-btn.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<!-- GAME BOARD HEADER SECTION -->
+	<header id="header">
+		<div class="main-container">
+			<div class="header-containers home-c">
+				<h1 class="header-text">Home</h1>
+			</div>
+			<div class="header-containers vs-c">
+				<h1 class="header-text vs-t">Vs</h1>
+			</div>
+			<div class="header-containers away-c">
+				<h1 class="header-text">Away</h1>
+			</div>
+		</div>
+	</header>
+	<!-- FOUL COUNT AND GAME TIME SECTION -->
+	<section id="time-section">
+		<div class="time-container">
+			<!-- <p class="time-text">Time</p> -->
+			<p id="game-time-el" class="time-number">
+				<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span><span
+					id="tens">00</span>
+			</p>
+		</div>
+	</section>
+	<!-- CURRENT GAME PERIOD SECTION -->
+	<section id="period-section">
+		<div class="points-main-container">
+			<div class="fouls-points-container">
+				<div class="points-container">
+					<p id="home-points-el" class="points">0</p>
+				</div>
+				<div class="foul-container">
+					<p class="foul-text">Fouls</p>
+					<p id="fouls-home-el" class="foul-number">0</p>
+				</div>
+			</div>
+			<div class="period-container">
+				<h1 class="period-text">Period <span id="period-el"></span></h1>
+			</div>
+			<div class="fouls-points-container">
+				<div class="points-container">
+					<p id="away-points-el" class="points">0</p>
+				</div>
+				<div class="foul-container">
+					<p class="foul-text">Fouls</p>
+					<p id="fouls-away-el" class="foul-number">0</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTROL PANEL SECTION -->
+	<section id="control-panel">
+		<!-- TEAM CONTROLS -->
+		<div id="team-controls">
+			<!-- HOME CONTROLS -->
+			<div id="home-controls">
+				<div class="control-container">
+					<h2 class="control-header2">Home Controls</h2>
+					<div class="points-control-container">
+						<p class="control-text">Points</p>
+						<button type="button" onclick="pointsOneHome()" id="points-btn1-home">
+							+1
+						</button>
+						<button type="button" onclick="pointsTwoHome()" id="points-btn2-home">
+							+2
+						</button>
+						<button type="button" onclick="pointsThreeHome()" id="points-btn3-home">
+							+3
+						</button>
+					</div>
+
+					<div class="fouls-control-container">
+						<p class="control-text">Fouls</p>
+						<button type="button" onclick="foulsPlusHome()" id="fouls-plus-home">
+							+
+						</button>
+						<button type="button" onclick="foulsMinusHome()" id="fouls-minus-home">
+							-
+						</button>
+					</div>
+				</div>
+				<div class="reset-container">
+					<p class="reset-text">Home Reset</p>
+					<button class="reset-btn" type="button" onclick="resetPointsHome()" id="reset-point-home">
+						points
+					</button>
+					<button class="reset-btn" type="button" onclick="resetFoulsHome()" id="reset-fouls-home">
+						fouls
+					</button>
+				</div>
+			</div>
+			<!-- AWAY CONTROLS -->
+			<div id="away-controls">
+				<div class="control-container">
+					<h2 class="control-header2">Away Controls</h2>
+					<div class="points-control-container">
+						<p class="control-text">Points</p>
+						<button type="button" onclick="pointsOneAway()" id="points-btn1-away">
+							+1
+						</button>
+						<button type="button" onclick="pointsTwoAway()" id="points-btn2-away">
+							+2
+						</button>
+						<button type="button" onclick="pointsThreeAway()" id="points-btn3-away">
+							+3
+						</button>
+					</div>
+					<div class="fouls-control-container">
+						<p class="control-text">Fouls</p>
+						<button type="button" onclick="foulsPlusAway()" id="fouls-plus-away">
+							+
+						</button>
+						<button type="button" onclick="foulsMinusAway()" id="fouls-minus-away">
+							-
+						</button>
+					</div>
+				</div>
+				<div class="reset-container">
+					<p class="reset-text">Away Reset</p>
+					<button class="reset-btn" type="button" onclick="resetPointsAway()" id="reset-point-away">
+						points
+					</button>
+					<button class="reset-btn" type="button" onclick="resetFoulsAway()" id="reset-fouls-away">
+						fouls
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- MAIN BOARD CONTROLS -->
+		<div id="main-controls">
+			<!-- <div class="time-period-controls"> -->
+			<div id="reset-time-container" class="reset-container board time">
+				<p class="reset-text board-text">Time Reset</p>
+				<button type="button" id="reset-time" class="reset-text">
+					Clear Time
+				</button>
+			</div>
+			<div class="time-controls">
+				<p class="control-text">Time</p>
+				<div class="start-stop-btns">
+					<button type="button" id="start-time">Start</button>
+					<button type="button" id="stop-time">Stop</button>
+				</div>
+			</div>
+			<div class="period-controls">
+				<p class="control-text">Period</p>
+				<div class="period-btns">
+					<button type="button" onclick="addPeriod()" id="add-period">
+						+
+					</button>
+					<button type="button" onclick="resetPeriod()" id="reset-period">
+						-
+					</button>
+				</div>
+			</div>
+			<div class="reset-container board">
+				<p class="reset-text board-text">Board Reset</p>
+				<button type="button" id="reset-board" class="reset-text">
+					Clear Game
+				</button>
+			</div>
+		</div>
+	</section>
+	<div id="home-container">
+		<a id="home-btn" href="../index.html">Home</a></p>
+	</div>
+	<script src="../src/javascript/score-board.js"></script>
+</body>
+
+</html>
